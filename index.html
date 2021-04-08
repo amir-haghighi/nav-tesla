@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fonts-->
+    <link
+      rel="stylesheet"
+      href="./node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;800;900&family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--fonts-->
+    <link rel="stylesheet" href="./basic.css" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="brand"><a href="index.html">A M I R</a></div>
+        <div class="nav-main">
+          <a href="">Static Pages</a>
+          <a href="">React</a>
+          <a href="">FUN</a>
+          <a href="">About Me</a>
+        </div>
+        <div class="nav-right">
+          <a href=""><span>Contact Me - </span>Order</a>
+        </div>
+
+        <button class="fa fa-bars nav-button" onclick="toggleNav()"></button>
+
+        <div class="nav-side">
+          <a href="">Static Pages</a>
+          <a href="">React</a>
+          <a href="">FUN</a>
+          <a href="">About Me</a>
+          <a href="">Order</a>
+        </div>
+      </div>
+
+      <picture>
+        <source media="(min-width: 600px)" srcset="./assets/pics/tesla-ms-homepage-desktop.jpg">
+        <img src="./assets/pics/tesla-ms-homepage-mobile.jpg">
+      </picture>
+      <picture>
+        <source media="(min-width: 600px)" srcset="./assets/pics/tesla-hero-portrait@2.jpg">
+        <img src="./assets/pics/tesla-hero-mobile@2.jpg">
+      </picture>
+      </div>
+    </div>
+    <script src="./nav.js"></script>
+  </body>
+</html>

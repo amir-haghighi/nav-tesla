@@ -1,0 +1,111 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: whitesmoke;
+  padding: 0;
+  margin: 0;
+}
+picture > * {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+img {
+  margin: -2px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav {
+  z-index: 1000;
+  font-weight: 400;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.2rem;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /*Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  /*border: 3px red solid;*/
+}
+.nav a {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* color: rgb(102, 119, 122); */
+}
+.brand a:hover {
+  background-color: unset;
+  color: rgb(140, 0, 0);
+}
+.nav-side a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.nav-main a {
+  border-radius: 50px;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.nav-button {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+}
+@font-face {
+  font-family: "tesla";
+  src: url(./assets/fonts/TESLA.ttf);
+}
+
+.brand {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.brand > * {
+  font-family: "tesla", "Cinzel", serif;
+  color: rgb(70, 0, 0);
+}
+
+.nav-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-main > * {
+  padding: 0 1.2rem;
+}
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.nav-right > a {
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+.nav-side {
+  display: none;
+  opacity: 0;
+  background: white;
+  padding-top: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-side a {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}

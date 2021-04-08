@@ -1,0 +1,87 @@
+.nav {
+  display: grid;
+  grid-template-columns: 20px repeat(6, 1fr);
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:
+    ". b b  b   .  . nb "
+    ". . .  ns  ns ns ns ";
+}
+
+.brand {
+  grid-area: b;
+}
+.nav-button {
+  grid-area: nb;
+  background-color: transparent;
+}
+.nav-main {
+  display: none;
+  white-space: nowrap;
+  grid-area: nm;
+}
+.nav-right {
+  grid-area: nr;
+  justify-content: flex-end;
+}
+.nav-side {
+  grid-area: ns;
+}
+.nav-right {
+  display: none;
+}
+.nav-button {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 400px) {
+  .nav {
+    grid-template-areas:
+      ". b b  b   .  . nb "
+      ". . .  .  ns ns ns ";
+  }
+  .nav-button {
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+  @media (min-width: 520px) {
+    .nav {
+      grid-template-areas:
+        ". b b  b   .  . nb "
+        ". . .  .   . ns ns ";
+    }
+    .nav-button {
+      font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 800px) {
+    .nav-main {
+      display: flex;
+    }
+
+    .nav-button {
+      display: none;
+    }
+
+    .nav-side,
+    .nav-side > * {
+      display: none;
+    }
+    .nav-right {
+      display: flex;
+    }
+    .nav-right span {
+      display: none;
+    }
+    .nav {
+      grid-template-areas: ". b nm  nm  nm nm nr ";
+    }
+  }
+  @media (min-width: 1000px) {
+    .nav {
+      grid-template-areas: ". b nm  nm  nm nr nr ";
+    }
+    .nav-right span {
+      display: inline;
+    }
+  }
+}
